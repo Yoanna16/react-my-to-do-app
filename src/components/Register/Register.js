@@ -51,7 +51,7 @@ const Register = ({
                         <i className="fas fa-key"></i>
                     </span>
                 </p>
-                <input className="button" type="submit" className="submit" value="Register" />
+                <input className="button submit" type="submit" value="Register" />
             </fieldset>
         </form>
     </section>

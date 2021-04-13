@@ -10,7 +10,8 @@
     margin-top: 100px;
 }
 
-.description {
+.description,
+p {
     margin-top: 60px;
     font-size: 27px;
 }

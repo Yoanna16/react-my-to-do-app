@@ -1,6 +1,6 @@
-import { auth } from '../../utils/firebase'; 
-import { Link } from 'react-router-dom'; 
-import { useEffect, useContext } from 'react'; 
+
+
+import { useContext } from 'react'; 
 import AuthContext from '../../contexts/AuthContext'; 
 
 import './WelcomePage.css'
@@ -18,9 +18,8 @@ const WelcomePage = () => {
             <p className="description">
             Planum is a note - taking service that allows you to keep track of your plan
             for the day! All tasks for the day or the week gathered in one place!
-            <p>Easy and convenient - this is PLANUM!</p>
             </p>
-            <Link to="/login" className="get-started-button">Get Started</Link>
+            <p>Easy and convenient - this is PLANUM!</p>
         </div>
     )
 }

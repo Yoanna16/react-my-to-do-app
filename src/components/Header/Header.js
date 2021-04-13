@@ -1,4 +1,4 @@
-import { auth } from '../../utils/firebase'; 
+
 import { Link } from 'react-router-dom'; 
 import { useEffect, useContext } from 'react'; 
 import AuthContext from '../../contexts/AuthContext';
@@ -6,7 +6,7 @@ import AuthContext from '../../contexts/AuthContext';
 import './Headernew.css'
 
 
-const Headernew = () => {
+const Header = () => {
 
     const {isAuthenticated, username} = useContext(AuthContext);
     
@@ -39,20 +39,11 @@ const Headernew = () => {
             {isAuthenticated ? <Link to="/" className="my-to-dos-button logo">PLANUM</Link> : ""}
             {isAuthenticated ? <Link to="/todos" className="my-to-dos-button">My To Do's</Link> : ""}
             {isAuthenticated ?  <Link to="/create" className="my-to-dos-button">Create</Link> : ""}
-            
-
-
+            <Link to="/" className="my-to-dos-button logo">PLANUM</Link>
           <div className="topnav-right">
-          {  isAuthenticated
-                    ?                   <Link to="/logout"  className="my-to-dos-button">Logout</Link> 
-                    : ""
-                  }
-                  {
-                      !isAuthenticated ?   <Link to="/register" className="my-to-dos-button">Register</Link> : ""
-                  }
-                  {
-                      !isAuthenticated ? <Link to="/login" className="my-to-dos-button">Login</Link> : ""
-                  }
+          {  isAuthenticated ? <Link to="/logout"  className="my-to-dos-button">Logout</Link> : ""}
+                  { !isAuthenticated ?   <Link to="/register" className="my-to-dos-button">Register</Link> : "" }
+                  { !isAuthenticated ? <Link to="/login" className="my-to-dos-button">Login</Link> : ""}
           </div>
           </div>
 
@@ -61,4 +52,4 @@ const Headernew = () => {
     )
 }
 
-export default Headernew;
+export default Header;
